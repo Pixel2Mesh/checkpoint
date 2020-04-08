@@ -6,10 +6,15 @@ wget https://developer.nvidia.com/compute/cuda/8.0/Prod2/local_installers/cuda-r
 dpkg -i cuda-repo-ubuntu1604-8-0-local-ga2_8.0.61-1_amd64-deb
 apt-get update
 apt-get install cuda=8.0.61-1
+rm cuda-repo-ubuntu1604-8-0-local-ga2_8.0.61-1_amd64-deb
 # 安装 g++4.8
 apt-get install g++-4.8
 update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8  100
 update-alternatives --config g++
+# 安装 gcc4.8
+apt-get install gcc-4.8
+update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8  100
+update-alternatives --config gcc
 # 安装 tensorflow-gpu1.3.0
 pip uninstall -y tensorflow
 pip install tensorflow-gpu==1.3.0
@@ -27,7 +32,10 @@ cd ..
 mv checkpoint Pixel2Mesh/Data/
 # make
 cd Pixel2Mesh/external
+make clean
 make
 # 生成train shell
+cd ../../
+rm -rf sample_data
 echo -e "#!/bin/bash\ncd Pixel2Mesh\npython train.py" >> train.sh
 chmod 777 train.sh
