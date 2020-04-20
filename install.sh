@@ -1,6 +1,6 @@
 #!/bin/bash
 # clone
-git clone https://github.com/nywang16/Pixel2Mesh.git
+git clone https://github.com/SeanLi-OI/Pixel2Mesh.git
 git clone https://github.com/SeanLi-OI/output.git
 rm -rf output/.git
 # 安装cuda8.0
@@ -41,5 +41,7 @@ cd ../../
 rm -rf sample_data
 echo -e "#!/bin/bash\ncd Pixel2Mesh\npython2 train.py" >> train.sh
 chmod 777 train.sh
+echo -e "#!/bin/bash\ncd Pixel2Mesh\ngit add -u\ngit commit -m \"commit message\"\ngit push" >> commit.sh
+chmod 777 commit.sh
 # 输出完成提示
 echo "Installation Complete!"
