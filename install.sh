@@ -1,6 +1,8 @@
 #!/bin/bash
 # clone
 git clone https://github.com/nywang16/Pixel2Mesh.git
+git clone https://github.com/SeanLi-OI/output.git
+rm -rf output/.git
 # 安装cuda8.0
 wget https://developer.nvidia.com/compute/cuda/8.0/Prod2/local_installers/cuda-repo-ubuntu1604-8-0-local-ga2_8.0.61-1_amd64-deb
 dpkg -i cuda-repo-ubuntu1604-8-0-local-ga2_8.0.61-1_amd64-deb
