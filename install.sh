@@ -41,3 +41,5 @@ cd ../../
 rm -rf sample_data
 echo -e "#!/bin/bash\ncd Pixel2Mesh\npython2 train.py" >> train.sh
 chmod 777 train.sh
+# 输出完成提示
+echo "Installation Complete!"
