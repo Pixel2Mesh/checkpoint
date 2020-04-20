@@ -18,10 +18,10 @@ apt-get install gcc-4.8
 update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8  100
 update-alternatives --config gcc
 # 安装 tensorflow-gpu1.3.0
-pip uninstall -y tensorflow
-pip install tensorflow-gpu==1.3.0
+python2 -m pip uninstall -y tensorflow
+python2 -m pip install tensorflow-gpu==1.3.0
 # 安装 tflearn0.3.2
-pip install tflearn==0.3.2
+python2 -m pip install tflearn==0.3.2
 # 链接 cudnn
 cd checkpoint
 dpkg -i "libcudnn6_6.0.21-1+cuda8.0_amd64.deb"
@@ -39,5 +39,5 @@ make
 # 生成train shell
 cd ../../
 rm -rf sample_data
-echo -e "#!/bin/bash\ncd Pixel2Mesh\npython train.py" >> train.sh
+echo -e "#!/bin/bash\ncd Pixel2Mesh\npython2 train.py" >> train.sh
 chmod 777 train.sh
