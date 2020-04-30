@@ -4,7 +4,6 @@ git clone https://github.com/SeanLi-OI/Pixel2Mesh.git
 git clone https://github.com/SeanLi-OI/output.git
 rm -rf output/.git
 # move data
-mv output/train_list.txt Pixel2Mesh/Data/train_list.txt
 mv output Pixel2Mesh/Data/
 # 安装cuda8.0
 wget https://developer.nvidia.com/compute/cuda/8.0/Prod2/local_installers/cuda-repo-ubuntu1604-8-0-local-ga2_8.0.61-1_amd64-deb
