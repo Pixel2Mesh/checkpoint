@@ -43,6 +43,8 @@ cd ../../
 rm -rf sample_data
 echo -e "#!/bin/bash\ncd Pixel2Mesh\npython2 train.py" >> train.sh
 chmod 777 train.sh
+echo -e "#!/bin/bash\ncd Pixel2Mesh\npython2 demo.py" >> test.sh
+chmod 777 test.sh
 echo -e "git config --global user.name \"example\"\ngit config --global user.email example@example.com\ncd Pixel2Mesh\ngit remote remove origin\ngit remote add origin https://<USERNAME>:<PASSWORD>@github.com/SeanLi-OI/Pixel2Mesh.git" >> git_init.sh
 chmod 777 git_init.sh
 echo -e "#!/bin/bash\ncd Pixel2Mesh\ngit add -u\ngit commit -m \"commit message\"\ngit push --set-upstream origin master" >> commit.sh
