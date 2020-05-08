@@ -12,12 +12,12 @@ apt-get update
 apt-get install cuda=8.0.61-1
 rm cuda-repo-ubuntu1604-8-0-local-ga2_8.0.61-1_amd64-deb
 # 安装 g++4.8
-apt-get install g++-4.8
-update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8  100
+apt-get install g++-4.9
+update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.9  100
 update-alternatives --config g++
 # 安装 gcc4.8
-apt-get install gcc-4.8
-update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8  100
+apt-get install gcc-4.9
+update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9  100
 update-alternatives --config gcc
 # 安装 tensorflow-gpu1.3.0
 python2 -m pip uninstall -y tensorflow
