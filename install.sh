@@ -1,7 +1,7 @@
 #!/bin/bash
 # clone
-git clone https://github.com/SeanLi-OI/Pixel2Mesh.git
-git clone https://github.com/SeanLi-OI/output.git
+git clone https://github.com/Pixel2Mesh/Pixel2Mesh.git
+git clone https://github.com/Pixel2Mesh/output.git
 rm -rf output/.git
 # move data
 mv output Pixel2Mesh/Data/
